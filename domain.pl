@@ -18,3 +18,10 @@ actionPrec(order(I,L), [in_stock(I, L)]).
 actionPrec(pickup(P), [ordered(P, L), at(C, L), ready_for_pickup(P)]).
 actionPrec(fix_car(C), [not(drivable(C))]).
 actionPrec(driveHome(C), [ordered(I), not(picked_up(I))]).
+
+actionAuxPrec(drive(C,L), [car(C), location(L)]).
+actionAuxPrec(order(I,L), [item(I), location(L)]).
+actionAuxPrec(pickup(P), [package(P)]).
+actionAuxPrec(fix_car(C), [car(C)]).
+actionAuxPrec(driveHome(C), [car(C)]).
+
