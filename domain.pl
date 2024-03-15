@@ -25,3 +25,8 @@ actionAuxPrec(pickup(P), [package(P)]).
 actionAuxPrec(fix_car(C), [car(C)]).
 actionAuxPrec(driveHome(C), [car(C)]).
 
+posEffect(drive(C,L),S,at(C,L)).
+posEffect(order(I,L),S,ordered(I,L)).
+posEffect(pickup(P),S,picked_up(I)).
+posEffect(fix_car(C),S,drivable(C)).
+# posEffect(driveHome(C),S,drivable(C)).
