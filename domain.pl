@@ -29,4 +29,10 @@ posEffect(drive(C,L),S,at(C,L)).
 posEffect(order(I,L),S,ordered(I,L)).
 posEffect(pickup(P),S,picked_up(I)).
 posEffect(fix_car(C),S,drivable(C)).
-# posEffect(driveHome(C),S,drivable(C)).
+# posEffect(driveHome(C),S,??).
+
+# negEffect(drive(C,L), State,??).
+negEffect(order(I,L), State, not(in_stock(I,L))).
+negEffect(pickup(P), State, not(ready_for_pickup(P))).
+negEffect(fix_car(C), State, not(drivable(C))).
+# negEffect(driveHome(C), State, ??).
