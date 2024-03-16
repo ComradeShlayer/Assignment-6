@@ -1,7 +1,7 @@
 %%%at(C,L,S)    ready_for_pickup(I,L,S)     in_stock(I,L,S)
 %%%picked_up(I,S)       ordered(I,L,S)     drivable(C,S)
 
-fluents([at(_,_,_), ready_for_pickup(_,_,_), in_stock(_,_,_), picked_up(_,_), ordered(_,_,_), drivable(_,_)])
+fluents([at(_,_,_), ready_for_pickup(_,_,_), in_stock(_,_,_), picked_up(_,_), ordered(_,_,_), drivable(_,_)]).
 fluent(at(_,_)). fluent(picked_up(_)). fluent(in_stock(_)).
 fluent(ready_for_pickup(_)). fluent(ordered(_)). fluent(drivable(_)).
 
