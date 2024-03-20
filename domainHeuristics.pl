@@ -45,3 +45,5 @@ negEffect(order(P,L), State, in_stock(P,L)).
 negEffect(order(P,L), State, picked_up(P,L)).
 negEffect(pickup(P,L), State, ready_for_pickup(P,L)).
 negEffect(pickup(P,L), State, ordered(P,L)).
+
+useless(drive(C,L1,L2), List) :- member(drive(C,L2,L1), List).

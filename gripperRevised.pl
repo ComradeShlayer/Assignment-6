@@ -52,6 +52,19 @@
 :- discontiguous(free/3).
 :- discontiguous(carry/4).
 
+at_robby(robot1,room1,[ ]).
+free(robot1,rgripper1,[ ]).     free(robot1,lgripper1,[ ]).
+at(ball1,room1,[ ]).    at(ball2,room2,[ ]).
+
+/* The predicates room(RM) and ball(B) provide types for the objects. 
+   They are not fluents and for this reason they have no situation argument. */
+room(room1).    room(room2).
+ball(ball1).    ball(ball2).
+
+/*--The goal state is defined with a list of fluent terms that must become true--*/
+
+goalState( [at(ball1,room2), at(ball2,room1)] ).
+
 fluents([at_robby(_,_,_),at(_,_,_),free(_,_,_),carry(_,_,_,_)]).
 
 fluent(at_robby(_,_)).   fluent(at(_,_)).  
